@@ -1,0 +1,158 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.machine {
+    width: 100%;
+    max-width: 1200px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Row and Product Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 23%;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.p-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.price {
+    color: #333;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.buy-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #45a049;
+}
+
+.buy-button:active {
+    transform: scale(0.98);
+}
+
+
+.payment {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.payment h2 {
+    font-size: 24px;
+}
+
+.cost {
+    font-weight: bold;
+    font-size: 28px;
+    color: #4CAF50;
+}
+#resetbutton{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.payment-method{
+    display: flex;
+    justify-content: space-around;
+}
+.payment-method>div>button{
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #f44336;
+    border: none;
+}
+@media screen and (max-width: 1200px) {
+    .product {
+        width: 22%;
+    }
+   
+}
+
+@media screen and (max-width: 800px) {
+    .product {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .product {
+        width: 80%;
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    .machine {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .product {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .payment h2 {
+        font-size: 22px;
+    }
+}
